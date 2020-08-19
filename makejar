@@ -1,0 +1,9 @@
+#2. Compile it : 
+	javac Source.java -cp $(hadoop classpath)
+#3. Create a manifest file (MyFile.mf) : 
+#	Main-Class: Source
+#
+#4. Create the Java executable : 
+	jar -cvmf MyFile.mf myjar.jar Source.class
+#5. Run it : 
+	hadoop jar myjar.jar
